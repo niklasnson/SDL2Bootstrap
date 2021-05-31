@@ -23,10 +23,6 @@ Application::Application(void) {
   renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
   mainEvent = new SDL_Event();
-
-  std::cout << Config::getMenuManager()->getViewID() << std::endl;
-
-  // Config::getMenuManager()->setActiveOption(renderer);
 }
 
 Application::~Application(void) {
