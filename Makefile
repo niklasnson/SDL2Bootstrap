@@ -1,7 +1,7 @@
 SRC_DIR = src
 OBJS = $(SRC_DIR)/*.cpp
 OUTPUT_DIR = release
-COMPILE_FLAGS = -std=c++11 -Wall -Wextra -g
+COMPILE_FLAGS = -std=c++14 -Wall -Wextra -g
 LINKER_FLAGS = -lSDL2 -lSDL2_image -lSDL2_mixer
 OBJ_NAME = application
 
