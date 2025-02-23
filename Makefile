@@ -2,7 +2,7 @@ SRC_DIR = src
 OBJS = $(SRC_DIR)/*.cpp
 OUTPUT_DIR = release
 COMPILE_FLAGS = -std=c++14 -Wall -Wextra -g
-LINKER_FLAGS = -lSDL2 -lSDL2_image -lSDL2_mixer
+LINKER_FLAGS = -lSDL2 -lSDL2_image
 OBJ_NAME = application
 
 all : $(OBJS)
@@ -17,4 +17,4 @@ clean:
 
 .PHONY: run
 run:
-	cd $(OUTPUT_DIR); ./$(OBJ_NAME)	
+	cd $(OUTPUT_DIR); ./$(OBJ_NAME)
