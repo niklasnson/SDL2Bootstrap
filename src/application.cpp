@@ -48,6 +48,11 @@ void Application::mainLoop() {
       SDL_Delay(MIN_FRAME_TIME - (SDL_GetTicks() - frameTime));
     }
   }
+
+  // If quitApplication is true, quit the application.
+  if (this->quitApplication) {
+    SDL_Quit();
+  }
 }
 
 void Application::input() {
@@ -65,7 +70,7 @@ void Application::inputMenu() {
     switch (mainEvent->key.keysym.sym) {
       case SDLK_ESCAPE:
         if (!keyMenuPressed) {
-          std::cout << "ESC" << std::endl;
+          this->quitApplication = true;
           keyMenuPressed = true;
         }
         break;
